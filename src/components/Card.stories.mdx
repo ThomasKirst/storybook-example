@@ -1,0 +1,33 @@
+import { Meta, Story } from '@storybook/addon-docs';
+
+import Card from './Card';
+
+<Meta title="Card" component={Card} />
+
+# Card component
+
+## Document me
+
+export const Template = (args) => <Card {...args} />;
+
+<Story
+  name="Hello World"
+  args={{
+    color: 'limegreen',
+    text: 'World',
+    isActive: true,
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+<Story
+  name="Hello Anita"
+  args={{
+    color: 'deeppink',
+    text: 'Anita',
+    isActive: false,
+  }}
+>
+  {Template.bind({})}
+</Story>
